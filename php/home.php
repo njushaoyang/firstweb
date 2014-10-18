@@ -133,6 +133,13 @@ session_start();
                             </li>
                         </ul>
                     </div>
+                    <div class="score-wrapper">
+                        <input class="score-input" type="text" id="score" /> 
+                    </div>
+                    <div class="bottombutton-wrapper">
+                        <input class="submit-button" type="button" value="提交"/>
+                        <input class="reset-button" type="button" value="取消" />
+                    </div>
                     <div class="img-wrapper" id="imgwrapper" style="display:none">
                         <div class="img-wrapper-head">
                             上传图片

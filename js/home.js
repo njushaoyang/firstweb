@@ -32,7 +32,7 @@ function changecolor(obj,id){
     checkobj=document.getElementById(id); 
     if(checkobj.checked==false){
         checkobj.checked=true;
-        obj.style.backgroundColor="blue";
+        obj.style.backgroundColor="#00DDDD";
     }else{
         checkobj.checked=false;
         obj.style.backgroundColor="#b3cee1";

@@ -381,6 +381,7 @@
     font-size: 12px;
     text-align: center;
     color: #444444;
+    border-radius: 4px;
 }
 .tag-list{
     width:100%;
