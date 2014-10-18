@@ -134,11 +134,12 @@ session_start();
                         </ul>
                     </div>
                     <div class="score-wrapper">
+                        <div class="score-text">悬赏分数</div>
                         <input class="score-input" type="text" id="score" /> 
                     </div>
                     <div class="bottombutton-wrapper">
-                        <input class="submit-button" type="button" value="提交"/>
-                        <input class="reset-button" type="button" value="取消" />
+                        <input class="reset-button" type="button" value="取消" onclick="resetInput();"/>
+                        <input class="submit-button" type="button" value="提交" onclick="submitInput();"/>
                     </div>
                     <div class="img-wrapper" id="imgwrapper" style="display:none">
                         <div class="img-wrapper-head">

@@ -38,3 +38,11 @@ function changecolor(obj,id){
         obj.style.backgroundColor="#b3cee1";
     }
 }
+function resetInput(){
+    document.getElementById("topic-input").value="";
+    document.getElementById("question").innerHTML="";
+    closeask();
+}
+function submitInput(){
+    //提交问题块的所有内容
+}
