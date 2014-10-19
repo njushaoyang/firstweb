@@ -16,7 +16,7 @@ session_start();
     </head>
     <body class="home">
         <?php
-        $_SESSION["name"]="pangzi";
+        $_SESSION["name"]="胖子";
         $name=$_SESSION["name"];
         echo "<input type='text' id='username' value='$name' style='display:none'/>";
         ?>
@@ -29,6 +29,9 @@ session_start();
                             <input class="search-text"type="text" id="search" name="search" />
                         </form>
                         <input class="search-button" type="button" id="searchbutton" name="searchbutton" value="搜索"/>
+                    </div>
+                    <div class="home-wrapper">
+                        <a class="home-ref" id="homeref" href="home.php" name="homeref">首页</a>
                     </div>
                     <div id="nav">
                         <ul>
@@ -73,7 +76,7 @@ session_start();
                                 <a class="optional-link" href="#">我的回答</a>
                             </li>
                             <li class="optional-item">
-                                <a class="optional-link" href="#">我的提问</a>
+                                <a class="optional-link" href="myquestion.php">我的提问</a>
                             </li>
                             <li class="optional-item">
                                 <a class="optional-link" href="#">搜索用户</a>
@@ -140,7 +143,7 @@ session_start();
                     </div>
                     <div class="score-wrapper">
                         <div class="score-text">悬赏分数</div>
-                        <input class="score-input" type="text" id="score" /> 
+                        <input class="score-input" type="text" id="score" value="0"/> 
                     </div>
                     <div class="bottombutton-wrapper">
                         <input class="reset-button" type="button" value="取消" onclick="resetInput();"/>

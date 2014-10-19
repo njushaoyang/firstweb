@@ -51,6 +51,11 @@ function resetInput() {
 }
 function createXML() {
     var xml = "<?xml version='1.0' ?>";
+    var str=document.getElementById("topic-input").value;
+    if (str.length>128||str.length==0) {
+        alert("请正确输入标题");
+        return;
+    }
     var title = "<title>" + document.getElementById("topic-input").value + "</title>";
     var tags = "";
     var item = document.getElementsByName("check-box");
@@ -62,15 +67,14 @@ function createXML() {
     var d = new Date();
     var time = "<time>" + d.getFullYear() + " " + (d.getMonth() + 1) + " " + d.getDate() + "</time>";
     var vote = "<vote>" + 0 + "</vote>";
-    var content = "<content>" + document.getElementById("question").innerHTML + "</content>";
-    pattern = /^[1-9]\d*$/;
+    var content = "<content><![CDATA[" + document.getElementById("question").innerHTML + "]]></content>";
+    pattern = /(^[1-9]\d*$)|0/;
     if (!pattern.test(document.getElementById("score").value)) {
-        alert("请正确输入数字");
+        alert("请正确输入分数");
         return;
     }
-    var score = "<score>" + document.getElementById("score").value + "</score>";
+    var score="<score>"+document.getElementById("score").value+"</score>";
     xml = xml + "<question>" + title + tags + author + time + vote + content + score + "</question>";
-
     var xmlpara = "title=" + document.getElementById("topic-input").value + "&xml=" + xml + "&author=" + document.getElementById("username").value;
     if (window.XMLHttpRequest) {
         xhr = new XMLHttpRequest();
@@ -82,7 +86,7 @@ function createXML() {
             var result = xhr.responseText.replace(/^\s*|\s*$/g, '');
             if (result == "failed") {
             } else if (result == "success") {
-                alert("提交成功");
+                window.location.href="myquestion.php";
             }
         }
     }
@@ -91,7 +95,6 @@ function createXML() {
     xhr.send(xmlpara);
 }
 function submitInput() {
-    //提交问题块的所有内容
     createXML();
 
 }
