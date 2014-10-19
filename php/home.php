@@ -15,6 +15,11 @@ session_start();
         <script type="text/javascript" src="../js/home.js"></script>
     </head>
     <body class="home">
+        <?php
+        $_SESSION["name"]="pangzi";
+        $name=$_SESSION["name"];
+        echo "<input type='text' id='username' value='$name' style='display:none'/>";
+        ?>
         <div class="wrapper">
             <div class="head-wrapper">
                 <div class="head-content">
@@ -101,35 +106,35 @@ session_start();
                         <ul class="tag-list">
                             <li>
                                 <div class="tag" id="java" onclick="changecolor(this, 'javabox');">java</div>
-                                <input type="checkbox" id="javabox"  style="display: none"/>
+                                <input type="checkbox" id="javabox"  name="check-box" value="java" style="display: none"/>
                             </li>
                             <li>
                                 <div class="tag" id="ccpp" onclick="changecolor(this,'ccppbox');">c/cpp</div>
-                                <input type="checkbox" id="ccppbox"  style="display: none"/>
+                                <input type="checkbox" id="ccppbox"  name="check-box" value="c/cpp" style="display: none"/>
                             </li>
                             <li>
                                 <div class="tag" id="php" onclick="changecolor(this,'phpbox');">php</div>
-                                <input type="checkbox" id="phpbox"  style="display: none"/>
+                                <input type="checkbox" id="phpbox"  name="check-box" value="php" style="display: none"/>
                             </li>
                             <li>
                                 <div class="tag" id="html" onclick="changecolor(this,'htmlbox');">html</div>
-                                <input type="checkbox" id="htmlbox"  style="display: none"/>
+                                <input type="checkbox" id="htmlbox"  name="check-box" value="html" style="display: none"/>
                             </li>
                             <li>
                                 <div class="tag" id="mysql" onclick="changecolor(this,'mysqlbox');">mysql</div>
-                                <input type="checkbox" id="mysqlbox"  style="display: none"/>
+                                <input type="checkbox" id="mysqlbox"  name="check-box" value="mysql" style="display: none"/>
                             </li>
                             <li>
                                 <div class="tag" id="android" onclick="changecolor(this,'androidbox');">android</div>
-                                <input type="checkbox" id="androidbox"  style="display: none"/>
+                                <input type="checkbox" id="androidbox"  name="check-box" value="android" style="display: none"/>
                             </li>
                             <li>
                                 <div class="tag" id="python" onclick="changecolor(this,'pythonbox');">python</div>
-                                <input type="checkbox" id="pythonbox"  style="display: none"/>
+                                <input type="checkbox" id="pythonbox"  name="check-box" value="python" style="display: none"/>
                             </li>
                             <li>
                                 <div class="tag" id="other" onclick="changecolor(this,'otherbox');">other</div>
-                                <input type="checkbox" id="otherbox"  style="display: none"/>
+                                <input type="checkbox" id="otherbox"  name="check-box" value="other" style="display: none"/>
                             </li>
                         </ul>
                     </div>
