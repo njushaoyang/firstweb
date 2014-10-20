@@ -4,7 +4,7 @@ $name = $_SESSION["name"];
 $link = mysql_connect("localhost", "root", "123456");
 if ($link) {
     mysql_select_db("mywork", $link);
-    $sql = "select * from question where authorname='$name'";
+    $sql = "select * from question where authorname='$name' order by time desc";
     $result = mysql_query($sql);
     $num = mysql_affected_rows();
     if (mysql_affected_rows() != -1) {

@@ -56,7 +56,7 @@ function createXML() {
         alert("请正确输入标题");
         return;
     }
-    var title = "<title>" + document.getElementById("topic-input").value + "</title>";
+    var title = "<title><![CDATA[" + document.getElementById("topic-input").value + "]]></title>";
     var tags = "";
     var item = document.getElementsByName("check-box");
     for (i = 0; i < item.length; i++) {

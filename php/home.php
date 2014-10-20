@@ -83,6 +83,7 @@ session_start();
                             </li>
                         </ul>
                     </div>
+                    <div style="clear:both;"></div>
                 </div>
             </div>
         </div>

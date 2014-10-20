@@ -31,6 +31,10 @@ function register(){
     var name=document.getElementById("name").value;
     var email=document.getElementById("email").value;
     var password=document.getElementById("password").value;
+    if(password.length<=6){ 
+        alert("密码长度过短");
+        return;
+    }
     if((email=="")||(name=="")||(password==""))
         return false;
     var para="name="+name+"&email="+email+"&password="+password;
