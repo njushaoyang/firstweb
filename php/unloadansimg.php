@@ -38,5 +38,5 @@ if ($result != 0) {
 }
 ?>
 <script type="text/javascript">
-    window.top.window.uploadResult(<?php echo "\"$toFile\""; ?>);
+    window.top.window.uploadAnsResult(<?php echo "\"$toFile\""; ?>);
 </script>

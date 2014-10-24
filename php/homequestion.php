@@ -4,7 +4,7 @@ $name = $_SESSION["name"];
 $link = mysql_connect("localhost", "root", "123456");
 if ($link) {
     mysql_select_db("mywork", $link);
-    $sql = "select * from question where authorname='$name' order by time desc";
+    $sql = "select * from question order by time desc";
     $result = mysql_query($sql);
     $num = mysql_affected_rows();
     if (mysql_affected_rows() != -1) {
@@ -25,7 +25,7 @@ if ($link) {
                 . "</div>"
                 . "<div class='que-content-wrapper'>"
                 . "<div class='que-title'>"
-                . "<a class='t-ref' href='questiondetial.php?art=$filename'>$title</a>"
+                . "<a class='t-ref' href='questiondetial.php?art="."$filename'>$title</a>"
                 . "</div>"
                 . "<div class='que-tag-wrapper'>";
                 if ($xml->tag) {
@@ -43,4 +43,3 @@ if ($link) {
         }
     }
 }
-

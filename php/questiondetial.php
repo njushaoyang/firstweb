@@ -1,12 +1,19 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
 <?php
 session_start();
 ?>
 <html lang="zh_CN" >
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-        <title>首页-乎乎</title>
+        <title>问题</title>
         <link rel="stylesheet" href="../css/home.css" type="text/css"  />
         <link rel="stylesheet" href="../css/brefquestion.css" type="text/css"  />
+        <link rel="stylesheet" href="../css/questiondetial.css" type="text/css"  />
         <script type="text/javascript">
             function askQuestion() {
                 document.getElementById("opacitytop").style.display = "block";
@@ -14,6 +21,7 @@ session_start();
             }
         </script>
         <script type="text/javascript" src="../js/home.js"></script>
+        <script type="text/javascript" src="../js/vote.js"></script>
     </head>
     <body class="home">
         <?php
@@ -56,12 +64,38 @@ session_start();
                 <div class="main-wrapper">
                     <div class="content">
                         <div class="content-header">
-                            热点问题
+                            问题
                         </div>
                         <div class="content-body">
                             <?php
-                            include 'homequestion.php';
+                            include 'onequestion.php';
                             ?>
+                        </div>
+                        <div class="answer-body">
+                            <div class="answer-wrapper">
+                                <div class="question-bar">
+                                    <div class="img-button" id="img-button" value="图片" onclick="answerOnloadimg();"></div>
+                                </div>
+                                <div class="answer-input">
+                                    <div class="answer" id="answer" contenteditable="true">
+                                    </div>
+                                </div>
+                                <div class="bottombutton-wrapper">
+                                    <input class="reset-button" type="button" value="取消" onclick="resetAnsInput();"/>
+                                    <input class="submit-button" type="button" value="提交" onclick="submitAnsInput();"/>
+                                </div>
+                                <div class="img-wrapper" id="answer-imgwrapper" style="display:none">
+                                    <div class="img-wrapper-head">
+                                        上传图片
+                                        <div class="close-img-head" onclick="closeimg();"></div>
+                                    </div>
+                                    <form class="img-form" action="../php/unloadansimg.php" method="post" 
+                                          enctype="multipart/form-data" target="form-target">
+                                        <input type="file" class="img-unload" name="myfile"/>
+                                        <input type="submit" class="img-submit" value="上传图片" />
+                                    </form>
+                                </div>
+                            </div>
                         </div>
                     </div>
                     <div class="optional-wrapper">
@@ -103,7 +137,7 @@ session_start();
                 </div>
                 <div class="question-wrapper">
                     <div class="question-bar">
-                        <div class="img-button"id="img-button"  onclick="onloadimg();"></div>
+                        <div class="img-button" id="img-button"  onclick="onloadimg();"/></div>
                     </div>
                     <div class="question-input">
                         <div class="question" id="question" contenteditable="true">
@@ -159,7 +193,7 @@ session_start();
                             <div class="close-img-head" onclick="closeimg();"></div>
                         </div>
                         <form class="img-form" action="../php/unloadimg.php" method="post" 
-                              enctype="multipart/form-data" target="form-target" onsubmit="startUpload();">
+                              enctype="multipart/form-data" target="form-target">
                             <input type="file" class="img-unload" name="myfile"/>
                             <input type="submit" class="img-submit" value="上传图片" />
                         </form>

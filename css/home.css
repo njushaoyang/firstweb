@@ -2,11 +2,9 @@
     margin:0px;
     padding-top: 46px;
     width:100%;
-    height:100%;
 }
 .wrapper{
     width:100%;
-    height:100%;
     overflow:visible;
 }
 .head-wrapper{
@@ -15,7 +13,7 @@
     left:0px;
     top:0px;
     height:45px;
-    background-color:#0767c8;
+    background-color:#666666;
     z-index:20;
 }
 .head-content{
@@ -25,11 +23,11 @@
     margin:0 auto;
 }
 .head-logo{
-    background-image:url(../img/new_logo.png);
+    background-image:url(../img/dog.png);
     width:60px;
     height:100%;
     display:block;
-    background-position:0 8px;
+    background-position:0 -10px;
     color:#fff;
     background-repeat: no-repeat;
     float:left;
@@ -49,27 +47,24 @@
     text-align:center;
 }
 .search-wrapper{
-    position: relative;
-    margin: 7px 0 0 12px;
-    height:32px;
+    margin: 0px 0 0 10px;
+    height:45px;
     float: left;
     width:460px;
 }
 .search-form{
     float:left;
-    height:30px;
+    height:45px;
     width:360px;
     margin:0px;
-    line-height:30px;
-    border: 1px solid #045BB3;
 }
 .search-text{
     width:360px;
     height:30px;
+    margin:7px 0 8px 0;
     border-radius:5px;
-    line-height:17px;
     background-color:#CECEFF;
-    border:0;
+    border:0px;
     padding:0;
     font-family: 'Helvetica Neue',Helvetica,Arial,Sans-serif;
     font-size:14px;
@@ -77,9 +72,8 @@
 .search-button{
     padding:0px;
     float:left;
-    margin: 0 0 0 6px;
-    background: #0d77e4;
-    background-color: #0e78e7;
+    margin: 6px 0 0 6px;
+    background-color: #333333;
     color: #FFF;
     font-size: 14px;
     width: 70px;
@@ -88,7 +82,7 @@
     text-align: center;
     text-shadow: 0 1px 1px rgba(0,0,0,.12);
     cursor: pointer;
-    border: 1px solid #045BB2;
+    border: 1px solid #333333;
     border-radius: 4px;
 }
 .home-wrapper{
@@ -186,7 +180,7 @@
 }
 
 .body-wrapper{
-    overflow:auto;
+    overflow:visible;
     min-height:400px;
     background-color:#fff;
     width: 960px;
@@ -202,7 +196,6 @@
 }
 .content{
     width:70%;
-    height:100%;
     float:left;
 }
 .content-header{
@@ -265,7 +258,7 @@
 .question-bar{
     width:100%;
     height:30px;
-    background-color:green;
+    background-color:#666666;
 }
 .question-input{
     margin-top: 10px;
@@ -288,6 +281,10 @@
     width:40px;
     float:left;
     margin:0 10px 0 10px;
+    background-image: url(../img/picture.png);
+    background-repeat: no-repeat;
+    background-color: transparent;
+    cursor: pointer;
 }
 .ask-wrapper{
     width: 550px;
@@ -387,7 +384,7 @@
     height:100%;
     line-height: 30px;
     width:50px;
-    background-color: #b3cee1;
+    background-color:#c4dae9;
     float: left;
     margin:0 5px 0 0px;
     overflow: hidden;
@@ -433,16 +430,45 @@
     height:30px;
     float:right;
     margin:0 0 0 20px;
-    background-color: #0767c8;
+    background-color: #669999;
     border-radius: 4px;
     color:#ccc;
+    border:1px solid #669999;
+    cursor:pointer;
 }
 .reset-button{
     width:60px;
     height:30px;
     float:right;
     margin:0 0 0 20px;
-    background-color: #0767c8;
+    background-color: #669999;
     border-radius: 4px;
+    border:1px solid #669999;
     color:#ccc;
+    cursor:pointer;
+}
+.answer-body{
+    width:100%;
+    height:280px;
+    margin :auto;
+}
+.answer-wrapper{
+    position: relative;
+}
+.answer-input{
+    margin-top: 10px;
+    margin-bottom: 20px;
+    width:100%;
+    height:150px;
+}
+.answer{
+    width:100%;
+    height:150px;
+    font-size: 14px;
+    outline: none;
+    padding: 0px;
+    word-wrap: break-word;
+    overflow-x: hidden; 
+    overflow-y: auto;
+    border: solid 1px #ccc;
 }
